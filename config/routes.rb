@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :bookings
+  resources :reviews
+  resources :media
   resources :spaces
   resources :users
   resources :admins
