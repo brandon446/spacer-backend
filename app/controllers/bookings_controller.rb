@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     # GET /bookings
     def index
     booking= Booking.all
-    render json: booking,include: [:space, :profile]
+    render json: booking,include: [:space, :user]
     end
 
     def show
