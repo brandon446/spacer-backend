@@ -1,18 +1,18 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: spacer
+    databaseName: spacer
+    user: spacer_user
 
 services:
   - type: web
-    name: mysite
+    name: leisure
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: leisure
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
