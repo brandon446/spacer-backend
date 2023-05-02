@@ -1,3 +1,3 @@
 class MediumSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :image_url, :space_id
 end
